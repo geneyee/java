@@ -1,6 +1,6 @@
 package chap_02;
 
-public class Study1 {
+public class Study201 {
     public static void main(String[] args) {
         /*
     2-1)
