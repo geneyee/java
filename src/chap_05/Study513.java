@@ -16,9 +16,17 @@ public class Study513 {
             // question -> words[i] -> 'm' 'o' 'u' 's' 'e' ->  순서 랜덤
 //            for (int j = 0; j < question.length; j++) {
 //                question[j]=question[(int)(Math.random()*question.length)];
-//            } //veovooovvv의 정답을 입력하세요. 중복으로 나옴.. 중복제거
+//            } //veovooovvv의 정답을 입력하세요. xxxx
 
+            for (int j = 0; j < question.length; j++) {
+                int x = (int) (Math.random() * question.length); // 인덱스 랜덤
+                char tmp = 0;
 
+                tmp = question[0];
+                question[0] = question[x];
+                question[x] = tmp;
+
+            }
 
             System.out.printf("Q%d. %s의 정답을 입력하세요. > ", i + 1, new String(question));
 
