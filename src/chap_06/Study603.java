@@ -10,4 +10,13 @@ class Student{
     int kor;
     int eng;
     int math;
+
+    int getTotal(){
+        return kor + eng + math;
+    }
+
+    float getAverage(){
+        float result = (float)getTotal()/3;
+        return Math.round(result * 10.0) / 10.0f;
+    }
 }
