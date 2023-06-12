@@ -10,4 +10,18 @@ class SutaCard {
     private int num; //0
     private boolean isKwang; //false
 
+    public SutaCard(){
+        num = 1;
+        isKwang = true;
+    }
+
+    public SutaCard(int num, boolean isKwang) {
+        this.num = num;
+        this.isKwang = isKwang;
+    }
+
+    String info() {
+        return num + (isKwang ? "k" : "");
+    }
+
 }
