@@ -28,6 +28,28 @@ class SutaDeck {
             cards[i] = new SutaCard(num, isKwang);
         }
     }
+
+    // 배열 cards에 담긴 카드의 위치 섞기
+    void shuffle() {
+        for (int i = 0; i < cards.length; i++) {
+            int x = (int) (Math.random() * cards.length);
+
+           SutaCard tmp = cards[i];
+           cards[i] = cards[x];
+           cards[x] = tmp;
+        }
+    }
+
+    // 배열 cards에서 지정된 위치의 SutaCard를 반환
+    public SutaCard pick(int index) {
+        return cards[index];
+    }
+
+    // 배열 cards에서 임의의 위치의 SutaCard를 반환
+    public SutaCard pick(){
+        int index = (int) (Math.random() * cards.length);
+        return cards[index];
+    }
 }
 
 class SutaCard {
