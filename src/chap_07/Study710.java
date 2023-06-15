@@ -6,6 +6,7 @@ class MyTv2 {
     private boolean isPowerOn;
     private int channel;
     private int volume;
+    private int preChannel;
 
     final int MAX_VOLUME = 100;
     final int MIN_VOLUME = 0;
@@ -29,11 +30,18 @@ class MyTv2 {
     }
 
     public void setChannel(int channel) {
+        preChannel = this.channel;
         this.channel = channel;
     }
 
     public void setVolume(int volume) {
         this.volume = volume;
+    }
+
+    // 7-11
+    public void gotoPrevChannel() {
+        // 이전 채널로 이동하는 method
+        setChannel(preChannel);
     }
 }
 public class Study710 {
