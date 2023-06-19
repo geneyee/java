@@ -13,7 +13,6 @@ public class Study715 {
         AirUnit au = ac;
         //    t = (Tank) u;
         GroundUnit gu1 = t;
-
     }
 }
 
