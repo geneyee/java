@@ -3,9 +3,9 @@ package chap_07;
 public class Study719 {
     public static void main(String[] args) {
         Buyer b = new Buyer();
-        b.buy(new TV());
+        b.buy(new Tv1());
         b.buy(new Computer());
-        b.buy(new TV());
+        b.buy(new Tv1());
         b.buy(new Audio());
         b.buy(new Computer());
         b.buy(new Computer());
@@ -33,7 +33,7 @@ class Buyer {
     void add(Product1 p) {
         if (i >= cart.length) {
             Product1[] cart2 = new Product1[cart.length * 2];
-            for (int j = 0; j < cart2.length; j++) {
+            for (int j = 0; j < cart.length; j++) {
                 cart2[j] = cart[j];
             }
             cart = cart2;
@@ -46,7 +46,7 @@ class Buyer {
         int sum = 0;
         System.out.print("구입한 물건 : ");
         for (int j = 0; j < cart.length; j++) {
-            System.out.print(cart[j] + ", ");
+            System.out.print(cart[j] + " ");
             sum += cart[j].price;
         }
         System.out.println("\n사용한 금액 : " + sum);
@@ -62,8 +62,8 @@ class Product1 {
     }
 }
 
-class TV extends Product1 {
-    TV() {
+class Tv1 extends Product1 {
+    Tv1() {
         super(100);
     }
 
