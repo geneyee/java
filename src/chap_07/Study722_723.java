@@ -4,16 +4,20 @@ package chap_07;
 public class Study722_723 {
     public static void main(String[] args) {
         Shape[] arr = {new Circle(5.0), new Rectangle(3, 4), new Circle(1)};
-        System.out.println("면적의 합 : "+sumArea(arr));
+        Rectangle[] arr2 = {new Rectangle(3, 3), new Rectangle(4, 5)};
+        System.out.println("면적의 합 : " + sumArea(arr));
+        System.out.println("정사각형입니까? " + new Rectangle(3,3).isSquare());
+        System.out.println("정사각형입니까? " + arr2[0].isSquare());
     }
     private static double sumArea(Shape[] arr){
         double sum = 0;
 
         for (int i = 0; i < arr.length; i++) {
-            sum+=arr[i].calcArea();
+            sum += arr[i].calcArea();
         }
         return sum;
     }
+
 }
 
 abstract class Shape {
@@ -91,4 +95,5 @@ class Rectangle extends Shape {
     boolean isSquare(){
         return width == height ? true : false;
     }
+
 }
