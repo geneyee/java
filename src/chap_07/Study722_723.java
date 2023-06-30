@@ -6,8 +6,8 @@ public class Study722_723 {
         Shape[] arr = {new Circle(5.0), new Rectangle(3, 4), new Circle(1)};
         Rectangle[] arr2 = {new Rectangle(3, 3), new Rectangle(4, 5)};
         System.out.println("면적의 합 : " + sumArea(arr));
-        System.out.println("정사각형입니까? " + new Rectangle(3,3).isSquare());
-        System.out.println("정사각형입니까? " + arr2[0].isSquare());
+//        System.out.println("정사각형입니까? " + new Rectangle(3,3).isSquare());
+//        System.out.println("정사각형입니까? " + arr2[0].isSquare());
     }
     private static double sumArea(Shape[] arr){
         double sum = 0;
