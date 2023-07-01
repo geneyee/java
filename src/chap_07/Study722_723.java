@@ -1,6 +1,5 @@
 package chap_07;
 
-
 public class Study722_723 {
     public static void main(String[] args) {
         Shape[] arr = {new Circle(5.0), new Rectangle(3, 4), new Circle(1)};
@@ -17,7 +16,6 @@ public class Study722_723 {
         }
         return sum;
     }
-
 }
 
 abstract class Shape {
